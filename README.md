@@ -115,7 +115,7 @@ Some of the common clustering methods include:
 
 # Machine Learning Workflow Fundamentals
 
-<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/Dilbert_ML.gif?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/Dilbert_ML.gif?raw=true" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Dilbert_ML.gif?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Dilbert_ML.gif?raw=true" /></a></p>
 
 At this point, your brain is probably hurting. Mine is.
 
@@ -285,7 +285,7 @@ import sys
 
 This portion of the lab will walk through the process of building a machine leraning application and model to determine petal and sepal length and width measurements for iris flowers.
 
-FIGURE 2 IRIS 
+<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Figure_2_Iris.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Figure_2_Iris.png?raw=true" /></a></p>
 
 In this scenario, we have existing measurements for three iris species.
 
@@ -390,6 +390,8 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15),
                            alpha=.8, cmap=mglearn.cm3)
 ```
 
+<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Figure-3.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Figure_3.png?raw=true" /></a></p>
+
 ## Build Your First Model: k-Nearest Neighbors
 
 ```Python
@@ -441,6 +443,8 @@ knn.fit(X_train, y_train)
 
 print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
 ```
+
+<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Fig_2_Snoopy.gif?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Fig_2_Snoopy.gif?raw=true" /></a></p>
 
 # Additional Resources
 
