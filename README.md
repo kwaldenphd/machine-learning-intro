@@ -5,11 +5,51 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 ## Lab Goals
 
-This lab provides an overview of 
+This lab provides an overview of core concepts in machine learning as well as an introduction to machine learning in the Python programming environment. By the end of this lab, students will be able to:
+- Describe and compare supervised and unsupervised machine learning algorithms
+- Describe common types of supervised machine learning methods
+- Understand the core Python libraries used in machine learning, with a focus on the `SciPy` stack
+- Write a Python machine learning program implementing a k-nearest neighbor classification algorithm
 
 ## Acknowledgements
 
+This lab is based on Chapter 1 "Introduction" from Andreas C. Müller and Sarah Guide, *[Introduction to Machine learning With Python: A Guide for Data Scientists](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/)* (O'Reilly, 2017).
+
 # Table of Contents
+
+- [Overview](#overview)
+  * [Supervised](#supervised)
+    * [Active Learning](#active-learning)
+    * [Classification](#classification)
+    * [Regression](#regression)
+  * [Unsupervised](#unsupervised)
+    * [Principal Component Analysis](#principal-component-analysis)
+    * [Cluster Analysis](#cluster-analysis)
+- [Machine Learning Workflow Fundamentals](#machine-learning-workflow-fundamentals)
+- [Machine Learning in Python](#machine-learning-in-python)
+  * [Core Libraries](#core-libraries)
+    * [`NumPy`](#numpy)
+    * [`pandas`](#pandas)
+    * [`matplotlib`](#matplotlib)
+    * [`SciPy`](#scipy)
+  * [Machine Learning Libraries](#machine-learning-libraries)
+    * [`scikit-learn`](#scikit-learn)
+    * [Deep Learning](#deep-learning)
+      * [TensorFlow](#tensorflow)
+      * [Keras](#keras)
+      * [PyTorch](#pytorch)
+- [Getting Started With `scikit-learn`](#getting-started-with-scikit-learn)
+- [Classifying Iris Species](#classifying-iris-species)
+  * [Meet the Data](#meet-the-data)
+  * [Training and Testing Data](#training-and-testing-data)
+  * [Inspect the Data](#inspect-the-data)
+  * [Build Your First Model: k-Nearest Neighbors](#build-your-first-model-k-nearest-neighbors)
+  * [Making Predictions](#making-predictions)
+  * [Evaluating the Model](#evaluating-the-model)
+- [Summary](#summary)
+- [Additional Resources](#additional-resources)
+- [Lab Notebook Questions](#lab-notebook-questions)
+  
 
 # Overview
 
@@ -231,7 +271,7 @@ For more on `scikit-learn`: https://scikit-learn.org
 
 `scikit-learn` supports a wide range of supervised and unsupervised machine learning algorithms.
 
-### Deep Learning Packages
+### Deep Learning
 
 #### TensorFlow
 
