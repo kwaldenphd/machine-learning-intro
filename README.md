@@ -77,13 +77,83 @@ Examples of a linear regression model might include predicting weight based on h
 
 ## Unsupervised
 
+***Unsupervised machine learning algorithms*** take input data that has not been labeled, classified, or categorized and find structure in that data, most often through grouping or clustering data points.
 
+On a fundamental level, an unsupervised machine learning algorithm engages in some sort of meaning making, as it attempts to build a compact internal representation of the world contained in the input data.
 
+Unsupervised machine learning falls into two primary methods: principal component analysis (PCA) and cluster analysis.
 
+Other types of unsupervised machine learning include anomaly detection and neural networks.
 
+### Principal Component Analysis
 
+***Principal component analysis*** is used to understand relationships across variables. 
 
+As a statistical technique, PCA reduces the dimensionality of an input dataset by creating new variables (principal components) that are weighted to represent relationships in the input dataset.
 
+For example, when applied to unstructured textual data, PCA will calculate two principal components, terms that are more or less significant in each component, as well as the relationship of the two components.
+
+To see this method in action: 
+- Luling Huang, "[Principal Component Analysis: Unsupervised Learning of Textual Data Part III](https://sites.temple.edu/tudsc/2019/03/12/unsupervised-learning-of-textual-data-iii-principal-component-analysis/)" *Temple University Digital Scholarship Center Blog* (12 March 2019).
+- Hugh Craig, "[Stylistic Analysis and Authorship Studies](https://sites.temple.edu/tudsc/2019/03/12/unsupervised-learning-of-textual-data-iii-principal-component-analysis/)" in *A Companion to Digital Humanities* (Blackwell, 2004).
+- Ted Underwood, "['Plot arcs' in the novel](https://tedunderwood.com/2015/01/03/plot-arcs-in-the-novel/)" *The Stone in the Shell blog* (3 January 2015).
+- Ben Schmidt, "[Fundamental plot arcs, seen through multidimensional analysis of thousands of TV and movie scripts](http://sappingattention.blogspot.com/2014/12/fundamental-plot-arcs-seen-through.html)" *Sapping Attention blog* (16 December 2014).
+
+And when in doubt, start with George Dallas, "[Principal Component Analysis 4 Dummies: Eigenvenctors, Eigenvalues and Dimension Reduction](https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/)" *personal blog* (30 October 2013).
+
+### Cluster Analysis
+
+A ***cluster analysis algorithm*** creates groups (or clusters) from a set of objects, with the goal of objects in each group (or cluster) being more similar to each other than the objects in othre groups (clusters).
+
+There are a number of different specific clustering algorithms that employ different methods of calculating and forming clusters.
+
+Some of the common clustering methods include:
+- Density-based methods, in which cluster parameters have to do with higher and lower density regions
+- Hierarchical-based methods, in which clusters have a tree-like structure
+- Partitioning methods, in which objects are partitioned into clusters and each partition forms a cluster
+- Grid-based methods, in which a grid-like structure of cells exists in the data space
+
+# Machine Learning Workflow Fundamentals
+
+DILBERT COMIC
+
+<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/Figure_1.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/Figure_1.png?raw=true" /></a></p>
+
+At this point, your brain is probably hurting. Mine is.
+
+Let's take a step back and consider the fundamentals of a machine learning workflow.
+
+Step 1- identify the problem or question, think about options for answering or solving, and decide if machine learning will be a useful tool.
+
+Step 2- identify and analyze available datasets to see if sufficient data is available to build a model
+
+Step 3- transform the data into a tabular structure so it can be the input for a machine learning model
+
+Step 4- train the model (or more accurately engage in an iterative process of training the model)
+
+Step 5- evaluate the model to see if (and how effectively) it solves the original question/problem
+
+Step 6- deploy the model
+
+As you can imagine, this is an iterative process that takes TIME.
+
+Time to determine the central problem or question, and figure out if machine learning is a good fit.
+
+Time to figure out what data is needed to build a model, identify or collect that data, and wrangle it into a tabular structure.
+
+Time to figure out what type of model is the best fit for the question/problem AS WELL AS the input data.
+
+Time to train the model and evaluate the effectiveness of the model.
+
+Time to figure out what the model has to say about your original question or problem.
+
+In short, TIME.
+
+For non-specialists, the complexity of the math happening underneath a machine learning algorithm can be overwhelming and daunting. 
+
+But our goal here is not to become overnight experts in applied statistics. 
+
+The purpose of this lab is to help demystify the broad strokes of how machine learning works, and 
 
 # Project Prompts
 
