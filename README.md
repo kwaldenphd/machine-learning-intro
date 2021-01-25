@@ -637,7 +637,33 @@ This score tells us that, on the test set, the model made the correct species pr
 
 Extrapolating that accuracy score, we can expect our model to be correct 97% of the time.
 
-## What Now
+<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Fig_2_Snoopy.gif?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Fig_2_Snoopy.gif?raw=true" /></a></p>
+
+Congrats- you've built a machine learning model!
+
+## Summary
+
+This lab covered a lot of ground. Let's recap.
+
+We started by unpacking some of the key terms used in machine learning, including supervised and unsupervised machine learning algorithms.
+
+We also talked about some of the common statistical methods used in those algorithms, including classification and regression.
+
+We then walked through an overview of the core Python libraries and packages used in machine learning, with a focus on the `SciPy` stack.
+
+The last half of the lab focused on building a model that predicts iris species based on sepal and petal measurements.
+
+For our three-class classification problem, the iris species were classes, and the species for an individual flower was its label.
+
+We stored the measurements and labels in NumPy arrays.
+
+Our model used the k-nearest neighbors classification algorithm and split labeled data into a training set and a test set.
+
+We passed those training data parameters to the model.
+
+We then used the test set data to calculate the model's accuracy.
+
+Putting that all together:
 
 ```Python
 X_train, X_test, y_train, y_test = train_test_split(
@@ -649,7 +675,7 @@ knn.fit(X_train, y_train)
 print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
 ```
 
-<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Fig_2_Snoopy.gif?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/figures/Fig_2_Snoopy.gif?raw=true" /></a></p>
+The core components of this example (`fit`, `predict`, and `score`) are common across other `scikit-learn` supervised algorithms.
 
 # Additional Resources
 
@@ -665,8 +691,5 @@ Andreas C. Müller and Sarah Guide's accessible *Introduction to Machine learnin
 - [Code repository](https://github.com/amueller/introduction_to_ml_with_python)
 
 [Manning Publications](https://www.manning.com/) has a number of titles on machine learning and deep learning that are also valuable starting places.
-
-
-# Project Prompts
 
 # Lab Notebook Questions
