@@ -153,7 +153,152 @@ For non-specialists, the complexity of the math happening underneath a machine l
 
 But our goal here is not to become overnight experts in applied statistics. 
 
-The purpose of this lab is to help demystify the broad strokes of how machine learning works, and 
+The purpose of this lab is to help demystify the broad strokes of how machine learning works, and provide an introduction to machine learning in the Python programming environment. 
+
+# Machine Learning in Python
+
+Python provides a range of options for machine learning work.
+
+The example in this lab uses `scikit-learn`, but there are other options.
+
+## Core Libraries
+
+Nearly all Python machine learning libraries are built on (or integrate) a few core libraries.
+
+### `NumPy`
+
+According to [package documentation](https://numpy.org/doc/stable/user/whatisnumpy.html), "`NumPy` is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more."
+
+In `NumPy`, data are stored as list-like objects called arrays.
+
+`NumPy` allows users to access, split, reshape, join, etc. data stored in arrays.
+
+### `pandas`
+
+As described in [package documentation](https://pandas.pydata.org/), `pandas` is "a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language."
+
+`pandas` enables Python to understand or interact with structured data as structured data.
+
+Software developers at AQR Capital Management began working on a Python-based tool (written in a combination of C and Python) for quantitative data analysis in 2008.
+
+The initial open-source version of `pandas` was released in 2008.
+
+At its core, "pandas is a software library written for the Python programming language for data manipulation and analysis. In particular, it offers data structures and operations for manipulating numerical tables and time series" ([Wikipedia](https://en.wikipedia.org/wiki/Pandas_(software))).
+
+The name `pandas` is derived from "panel data," an econometrics term used to describe particular types of datasets.
+
+The name `pandas` is also a play on "Python data analysis."
+
+For more on the history and origins of `pandas`, check out Wes McKinney's "[`pandas`: a Foundational Python Library for Data Analysis and Statistics](https://www.dlr.de/sc/Portaldata/15/Resources/dokumente/pyhpc2011/submissions/pyhpc2011_submission_9.pdf)" 2011 paper.
+
+### `matplotlib`
+
+For our purposes, a plot is defined as "a graphic representation (such as a chart)" (Merriam Webster).
+
+These graphic representations of data are often called charts, graphs, figures, etc.
+
+In the context of programming, computer science, and data science, we refer to these as plots.
+
+We can generate plots for data stored in pandas using the `matplotlib` package.
+
+`matplotlib` was developed in 2002 as a MATLAB-like plotting interface for Python.
+
+"Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python...Matplotlib produces publication-quality figures in a variety of hardcopy formats and interactive environments across platforms. Matplotlib can be used in Python scripts, the Python and IPython shell, web application servers, and various graphical user interface toolkits" ([Matplotlib documentation, Github](https://github.com/matplotlib/matplotlib))
+
+As described by the original developer John Hunter, "Matplotlib is a library for making 2D plots of arrays in Python. Although it has its origins in emulating the MATLAB graphics commands, it is independent of MATLAB, and can be used in a Pythonic, object oriented way. Although Matplotlib is written primarily in pure Python, it makes heavy use of NumPy and other extension code to provide good performance even for large arrays. Matplotlib is designed with the philosophy that you should be able to create simple plots with just a few commands, or just one! If you want to see a histogram of your data, you shouldn't need to instantiate objects, call methods, set properties, and so on; it should just work."
+
+For more on `matplotlib`'s development and history: John Hunter, "[History](https://matplotlib.org/users/history.html)" Matplotlib (2008)
+
+### `SciPy`
+
+"SciPy is a free and open-source Python library used for scientific computing and technical computing. SciPy contains modules for optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers and other tasks common in science and engineering. SciPy builds on the NumPy array object and is part of the NumPy stack which includes tools like Matplotlib, pandas and SymPy, and an expanding set of scientific computing libraries. This NumPy stack has similar users to other applications such as MATLAB, GNU Octave, and Scilab. The NumPy stack is also sometimes referred to as the SciPy stack" ([Wikipedia](https://en.wikipedia.org/wiki/SciPy)).
+
+For more on `SciPy`, consult the [package documentation](https://www.scipy.org/scipylib/index.html).
+
+## Machine Learning Libraries
+
+So putting that all together, we have the following packages as the the foundation for our machine learning environment:
+- `NumPy`
+- `SciPy`
+- `matplotlib`
+- `pandas`
+
+This combination of packages is part of what is known as the [`SciPy` stack](https://www.scipy.org/stackspec.html).
+
+### Scikit-learn
+
+"Scikit-learn...is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy" ([Wikipedia](https://en.wikipedia.org/wiki/Scikit-learn)).
+
+For more on `scikit-learn`: https://scikit-learn.org
+
+`scikit-learn` supports a wide range of supervised and unsupervised machine learning algorithms.
+
+### Deep Learning Packages
+
+#### TensorFlow
+
+Developed by the team at Google Brain, "TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications" (["Why TensorFlow"](https://www.tensorflow.org/).
+
+#### Keras
+
+"Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow. It was developed with a focus on enabling fast experimentation" (["About Keras"](https://keras.io/about/).
+
+#### PyTorch
+
+"PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, primarily developed by Facebook's AI Research lab (FAIR). It is free and open-source software released under the Modified BSD license...A number of pieces of Deep Learning software are built on top of PyTorch, including Tesla Autopilot [and] Uber's Pyro" ([Wikipedia](https://en.wikipedia.org/wiki/PyTorch)).
+
+For more on PyTorch: https://pytorch.org/
+
+# Getting Started With `scikit-learn`
+
+First step is to make sure we have all the necessary packages installed in our Python environment:
+- [`NumPy`](https://numpy.org/install/)
+- [`SciPy`](https://www.scipy.org/install.html)
+- [`matplotlib`](https://matplotlib.org/3.3.3/users/installing.html)
+- [`pandas`](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
+
+We can install at the command line using `pip`:
+- `pip install PACKAGE NAME`
+
+We can install using `conda`:
+- `conda install PACKAGE NAME`
+
+To install in a Jupyter notebook environment:
+```Python
+# Install a pip package in the current Jupyter kernel
+import sys
+!{sys.executable} -m pip install <PACKAGE NAME>
+```
+
+The links above send you directly to the package installation instructions.
+
+To install `scikit-learn`:
+- (using pip) `pip install -U scikit-learn`
+- (using conda) `conda install -c conda-forge scikit-learn`
+
+For a Jupyter notebook environment:
+```Python
+# Install a pip package in the current Jupyter kernel
+import sys
+!{sys.executable} -m pip install --user sckikit-learn
+```
+
+
+# Additional Resources
+
+Later in the semester, you will have the opportunity to build your own machine learning model. 
+
+The six steps outlined above can get you started, but there's obviously additional research needed when making decisions about approaches, methods, and models.
+
+Starting with a method or concept's Wikipedia page can give you the broad strokes as well as links or citatations for additional resources.
+
+Andreas C. Müller and Sarah Guide's accessible *Introduction to Machine learning With Python: A Guide for Data Scientists* (O'Reilly, 2017) is where I would start with additional research. 
+- [Publisher website](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/)
+- [Link to access via Google Drive](https://drive.google.com/file/d/1VHBuayX6PoZZrFaps-HLs3exXoLPSlSM/view?usp=sharing) (ND users only)
+- [Code repository](https://github.com/amueller/introduction_to_ml_with_python)
+
+[Manning Publications](https://www.manning.com/) has a number of titles on machine learning and deep learning that are also valuable starting places.
+
 
 # Project Prompts
 
