@@ -115,9 +115,7 @@ Some of the common clustering methods include:
 
 # Machine Learning Workflow Fundamentals
 
-DILBERT COMIC
-
-<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/Figure_1.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/Figure_1.png?raw=true" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/machine-learning-intro/blob/main/Dilbert_ML.gif?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/machine-learning-intro/blob/main/Dilbert_ML.gif?raw=true" /></a></p>
 
 At this point, your brain is probably hurting. Mine is.
 
@@ -283,6 +281,166 @@ import sys
 !{sys.executable} -m pip install --user sckikit-learn
 ```
 
+# Classifying Iris Species
+
+This portion of the lab will walk through the process of building a machine leraning application and model to determine petal and sepal length and width measurements for iris flowers.
+
+FIGURE 2 IRIS 
+
+In this scenario, we have existing measurements for three iris species.
+
+Our goal is to build a machine learning model from the existing measurements to be able to predict the species for a new iris based on its measurements.
+
+Because we have labeled measurements as our input data, this is going to be a ***supervised*** machine learning problem.
+
+Because we want to predict class membership, this is a ***classification*** problem.
+
+The desired output for this model is a single data point--the flower species.
+
+## Meet the Data
+
+The iris data is included in `sckikit-learn`.
+
+We will load the data by calling the `load_iris` function.
+
+```Python
+# import function
+from sklearn.datasets import load_iris
+
+# load dataset
+iris_dataset = load_iris()
+```
+
+The `iris_dataset` object is similar to a dictionary, containing keys and values.
+
+To see the list of key-value pairs:
+```Python
+print("Keys of iris_dataset: \n{}".format(iris_dataset.keys()))
+```
+
+The value for the `DESCR` key provides a short description this dataset.
+
+A great place to start in making sense of what data we have.
+
+```Python
+print(iris_dataset['DESCR'[:193] + "\n...")
+```
+
+We can also look at the value for the `target_names` key to see the three species names that are working as classes in the classification algorithm.
+
+```Python
+print("Target names:", iris_dataset['target_names'])
+```
+
+```Python
+print("Feature names:\n", iris_dataset['feature_names'])
+```
+
+```Python
+print("Type of data:", type(iris_dataset['data']))
+```
+
+```Python
+print("Shape of data:", iris_dataset['data'].shape)
+```
+
+```Python
+print("First five rows of data:\n", iris_dataset['data'][:5])
+```
+
+```Python
+print("Type of target:", type(iris_dataset['target']))
+```
+
+```Python
+print("Shape of target:", iris_dataset['target'].shape)
+```
+
+```Python
+print("Target:\n", iris_dataset['target'])
+```
+
+## Training and Testing Data
+
+```Python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(
+    iris_dataset['data'], iris_dataset['target'], random_state=0)
+```
+
+```Python
+print("X_train shape:", X_train.shape)
+print("y_train shape:", y_train.shape)
+```
+
+```Python
+print("X_test shape:", X_test.shape)
+print("y_test shape:", y_test.shape)
+```
+
+## What Happened?
+
+```Python
+# create dataframe from data in X_train
+# label the columns using the strings in iris_dataset.feature_names
+iris_dataframe = pd.DataFrame(X_train, columns=iris_dataset.feature_names)
+# create a scatter matrix from the dataframe, color by y_train
+pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15),
+                           marker='o', hist_kwds={'bins': 20}, s=60,
+                           alpha=.8, cmap=mglearn.cm3)
+```
+
+## Build Your First Model: k-Nearest Neighbors
+
+```Python
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors=1)
+```
+
+```Python
+knn.fit(X_train, y_train)
+```
+
+## Making Predictions
+
+```Python
+X_new = np.array([[5, 2.9, 1, 0.2]])
+print("X_new.shape:", X_new.shape)
+```
+
+```Python
+prediction = knn.predict(X_new)
+print("Prediction:", prediction)
+print("Predicted target name:",
+       iris_dataset['target_names'][prediction])
+```
+
+## Evaluating the Model
+
+```Python
+y_pred = knn.predict(X_test)
+print("Test set predictions:\n", y_pred)
+```
+
+```Python
+print("Test set score: {:.2f}".format(np.mean(y_pred == y_test)))
+```
+
+```Python
+print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
+```
+
+## What Now
+
+```Python
+X_train, X_test, y_train, y_test = train_test_split(
+    iris_dataset['data'], iris_dataset['target'], random_state=0)
+
+knn = KNeighborsClassifier(n_neighbors=1)
+knn.fit(X_train, y_train)
+
+print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
+```
 
 # Additional Resources
 
