@@ -733,3 +733,5 @@ Andreas C. Müller and Sarah Guide's accessible *Introduction to Machine learnin
 [Manning Publications](https://www.manning.com/) has a number of titles on machine learning and deep learning that are also valuable starting places.
 
 # Lab Notebook Questions
+
+Q1: Write a narrative that documents and describes your experience working through this lab. What challenges did you face, and how did you solve them? What did you learn about machine learning through this lab? How are you thinking about machine learning differently after this lab? 
