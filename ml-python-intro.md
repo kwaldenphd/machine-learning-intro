@@ -29,13 +29,6 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 # Overview
 
-This lab has three sections-
-- [an overview of artificial intelligence core concepts and terminology](https://github.com/kwaldenphd/machine-learning-intro/blob/main/ai-overview.md)
-- [a more detailed overview of machine learning concepts and terminology, with a focus on the Python programming language]()
-- [a tutorial with step-by-step instructions for building a machine learning classification model]()
-
-
-
 There are two overarching categories of machine learning algorithms: supervised and unsupervised.
 
 ## Supervised
