@@ -262,7 +262,7 @@ Developed by the team at Google Brain, "TensorFlow is an end-to-end open source 
 
 #### Keras
 
-"Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow. It was developed with a focus on enabling fast experimentation" (["About Keras"](https://keras.io/about/).
+"Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow. It was developed with a focus on enabling fast experimentation" (["About Keras"](https://keras.io/about/)).
 
 #### PyTorch
 
