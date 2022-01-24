@@ -17,6 +17,7 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
   * [Neural Network](#neural-network)
   * [Deep Learning: Putting It All Together](#deep-learning-putting-it-all-together)
 - [Machine Learning Versus Deep Learning](#machine-learning-versus-deep-learning)
+- [Next Steps](#next-steps)
 
 # Overview
 
@@ -149,3 +150,7 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 <p align="center"><a href="https://github.com/kwaldenphd/artificial-intelligence-overview/blob/main/figures/Figure_10.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/artificial-intelligence-overview/blob/main/figures/Figure_10.png?raw=true" /></a></p>
 
 <p align="center">Figure that illustrates the difference between machine learning and deep learning. <a href="https://www.quora.com/What-is-the-difference-between-deep-learning-and-usual-machine-learning">Image from Quora</a></p>
+
+# Next Steps
+
+[Click here](https://github.com/kwaldenphd/machine-learning-intro/blob/main/ml-python-intro.md) to go to the next section of this lab.
