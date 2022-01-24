@@ -41,6 +41,7 @@ This lab is based on Chapter 1 "Introduction" from Andreas C. Müller and Sarah 
 # Install a pip package in the current Jupyter kernel
 import sys
 !{sys.executable} -m pip install <PACKAGE NAME>
+```
 
 3. The links above send you directly to the package installation instructions.
 
