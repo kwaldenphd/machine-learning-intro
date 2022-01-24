@@ -30,17 +30,33 @@ This lab is based on Chapter 1 "Introduction" from Andreas C. Müller and Sarah 
 
 2. A couple of options for installing the needed packages.
 
-2a. We can install at the command line using `pip`:
-- `pip install PACKAGE NAME`
+  * 2a. We can install at the command line using `pip`:
+    * `pip install PACKAGE NAME`
 
-2b. We can install using `conda`:
-- `conda install PACKAGE NAME`
+  * 2b. We can install using `conda`:
+    * `conda install PACKAGE NAME`
 
-2c. To install in a Jupyter notebook environment:
+  * 2c. To install in a Jupyter notebook environment:
 ```Python
 # Install a pip package in the current Jupyter kernel
 import sys
 !{sys.executable} -m pip install <PACKAGE NAME>
+
+3. The links above send you directly to the package installation instructions.
+
+4. To install `scikit-learn`:
+- (using pip) `pip install -U scikit-learn`
+- (using conda) `conda install -c conda-forge scikit-learn`
+
+5. For a Jupyter notebook environment:
+```Python
+# Install a pip package in the current Jupyter kernel
+import sys
+!{sys.executable} -m pip install --user numpy
+!{sys.executable} -m pip install --user pandas
+!{sys.executable} -m pip install --user scipy
+!{sys.executable} -m pip install --user matplotlib
+!{sys.executable} -m pip install --user sckikit-learn
 ```
 
 3. The links above send you directly to the package installation instructions.
