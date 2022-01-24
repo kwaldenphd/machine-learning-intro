@@ -29,27 +29,27 @@ This lab has three sections-
 
 ## Summary
 
-This lab covered a lot of ground. Let's recap.
+1. This lab covered a lot of ground. Let's recap.
 
-We started by unpacking some of the key terms used in machine learning, including supervised and unsupervised machine learning algorithms.
+2. We started by unpacking some of the key terms used in machine learning, including supervised and unsupervised machine learning algorithms.
 
-We also talked about some of the common statistical methods used in those algorithms, including classification and regression.
+3. We also talked about some of the common statistical methods used in those algorithms, including classification and regression.
 
-We then walked through an overview of the core Python libraries and packages used in machine learning, with a focus on the `SciPy` stack.
+4. We then walked through an overview of the core Python libraries and packages used in machine learning, with a focus on the `SciPy` stack.
 
-The last section of the lab focused on building a model that predicts iris species based on sepal and petal measurements.
+5. The last section of the lab focused on building a model that predicts iris species based on sepal and petal measurements.
 
-For our three-class classification problem, the iris species were classes, and the species for an individual flower was its label.
+6. For our three-class classification problem, the iris species were classes, and the species for an individual flower was its label.
 
-We stored the measurements and labels in NumPy arrays.
+7. We stored the measurements and labels in NumPy arrays.
 
-Our model used the k-nearest neighbors classification algorithm and split labeled data into a training set and a test set.
+8. Our model used the k-nearest neighbors classification algorithm and split labeled data into a training set and a test set.
 
-We passed those training data parameters to the model.
+9. We passed those training data parameters to the model.
 
-We then used the test set data to calculate the model's accuracy.
+10. We then used the test set data to calculate the model's accuracy.
 
-Putting that all together:
+11. Putting that all together:
 
 ```Python
 X_train, X_test, y_train, y_test = train_test_split(
@@ -61,22 +61,22 @@ knn.fit(X_train, y_train)
 print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
 ```
 
-The core components of this example (`fit`, `predict`, and `score`) are common across other `scikit-learn` supervised algorithms.
+12. The core components of this example (`fit`, `predict`, and `score`) are common across other `scikit-learn` supervised algorithms.
 
 # Additional Resources
 
-Later in the semester, you will have the opportunity to build your own machine learning model. 
+13. Later in the semester, you will have the opportunity to build your own machine learning model. 
 
-The steps outlined in this lab can get you started, but there's obviously additional research needed when making decisions about approaches, methods, and models.
+14. The steps outlined in this lab can get you started, but there's obviously additional research needed when making decisions about approaches, methods, and models.
 
-Starting with a method or concept's Wikipedia page can give you the broad strokes as well as links or citatations for additional resources.
+15. Starting with a method or concept's Wikipedia page can give you the broad strokes as well as links or citatations for additional resources.
 
-Andreas C. Müller and Sarah Guide's accessible *Introduction to Machine learning With Python: A Guide for Data Scientists* (O'Reilly, 2017) is where I would start with additional research. 
+16. Andreas C. Müller and Sarah Guide's accessible *Introduction to Machine learning With Python: A Guide for Data Scientists* (O'Reilly, 2017) is where I would start with additional research. 
 - [Publisher website](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/)
 - [Link to access via Google Drive](https://drive.google.com/file/d/1VHBuayX6PoZZrFaps-HLs3exXoLPSlSM/view?usp=sharing) (ND users only)
 - [Code repository](https://github.com/amueller/introduction_to_ml_with_python)
 
-[Manning Publications](https://www.manning.com/) has a number of titles on machine learning and deep learning that are also valuable starting places.
+17. [Manning Publications](https://www.manning.com/) has a number of titles on machine learning and deep learning that are also valuable starting places.
 
 # Lab Notebook Questions
 
