@@ -20,6 +20,8 @@ This lab is based on Chapter 1 "Introduction" from Andreas C. Müller and Sarah 
   * [Evaluating the Model](#evaluating-the-model)
 - [Next Steps](#next-steps)
 
+[Click here](https://colab.research.google.com/drive/1n4kmx2iY7cBYYK1J876TNOA-Z7N3dzzB?usp=sharing) to access the lab procedure as a Jupyter Notebook.
+
 # Getting Started With `scikit-learn`
 
 1. The first step is to make sure we have all the necessary packages installed in our Python environment:
@@ -42,7 +44,6 @@ This lab is based on Chapter 1 "Introduction" from Andreas C. Müller and Sarah 
 import sys
 !{sys.executable} -m pip install <PACKAGE NAME>
 ```
-
 3. The links above send you directly to the package installation instructions.
 
 4. To install `scikit-learn`:
@@ -50,6 +51,7 @@ import sys
 - (using conda) `conda install -c conda-forge scikit-learn`
 
 5. For a Jupyter notebook environment:
+
 ```Python
 # Install a pip package in the current Jupyter kernel
 import sys
@@ -57,19 +59,6 @@ import sys
 !{sys.executable} -m pip install --user pandas
 !{sys.executable} -m pip install --user scipy
 !{sys.executable} -m pip install --user matplotlib
-!{sys.executable} -m pip install --user sckikit-learn
-```
-
-3. The links above send you directly to the package installation instructions.
-
-4. To install `scikit-learn`:
-- (using pip) `pip install -U scikit-learn`
-- (using conda) `conda install -c conda-forge scikit-learn`
-
-5. For a Jupyter notebook environment:
-```Python
-# Install a pip package in the current Jupyter kernel
-import sys
 !{sys.executable} -m pip install --user sckikit-learn
 ```
 
@@ -107,6 +96,7 @@ iris_dataset = load_iris()
 
 15. To see the list of key-value pairs:
 ```Python
+# show dataset keys
 print("Keys of iris_dataset: \n{}".format(iris_dataset.keys()))
 ```
 
@@ -115,12 +105,14 @@ print("Keys of iris_dataset: \n{}".format(iris_dataset.keys()))
 17. A great place to start in making sense of what data we have.
 
 ```Python
+# show description of iris dataset
 print(iris_dataset['DESCR'[:193] + "\n...")
 ```
 
 18. We can also look at the value for the `target_names` key to see the three species names that are working as classes in the classification algorithm.
 
 ```Python
+# show target names
 print("Target names:", iris_dataset['target_names'])
 ```
 
@@ -129,12 +121,14 @@ print("Target names:", iris_dataset['target_names'])
 20. We can access the value for the `feature_names` key to learn more about each feature or data point.
 
 ```Python
+# show feature names
 print("Feature names:\n", iris_dataset['feature_names'])
 ```
 
 21. We can also see how Python has stored feature data by using `type()`.
 
 ```Python
+# show data type
 print("Type of data:", type(iris_dataset['data']))
 ```
 
@@ -145,6 +139,7 @@ print("Type of data:", type(iris_dataset['data']))
 24. We can also get a sense of the scope or size of the dataset using `.shape`.
 
 ```Python
+# show shape of data
 print("Shape of data:", iris_dataset['data'].shape)
 ```
 
@@ -159,12 +154,14 @@ print("Shape of data:", iris_dataset['data'].shape)
 29. We can also access feature values for the first five samples.
 
 ```Python
+# show first five rows of data
 print("First five rows of data:\n", iris_dataset['data'][:5])
 ```
 
 30. We can dig further into how Python has stored this data.
 
 ```Python
+# show target type
 print("Type of target:", type(iris_dataset['target']))
 ```
 
@@ -173,12 +170,14 @@ print("Type of target:", type(iris_dataset['target']))
 32. We can also determine the shape of the `target` array.
 
 ```Python
+# show shape of target
 print("Shape of target:", iris_dataset['target'].shape)
 ```
 
 33. Last but not least, we might want to know how species names are represent or encoded in this dataset.
 
 ```Python
+# show target
 print("Target:\n", iris_dataset['target'])
 ```
 
@@ -222,7 +221,10 @@ print("Target:\n", iris_dataset['target'])
 50. So let's call `train_test_split` on our data.
 
 ```Python
+# import statements
 from sklearn.model_selection import train_test_split
+
+# train/test/split
 X_train, X_test, y_train, y_test = train_test_split(
     iris_dataset['data'], iris_dataset['target'], random_state=0)
 ```
@@ -246,12 +248,18 @@ X_train, X_test, y_train, y_test = train_test_split(
 59. We can see the format and shape for those output arrays.
 
 ```Python
+# show x train shape
 print("X_train shape:", X_train.shape)
+
+# show y train shape
 print("y_train shape:", y_train.shape)
 ```
 
 ```Python
+# show x test shape
 print("X_test shape:", X_test.shape)
+
+# show y test shape
 print("y_test shape:", y_test.shape)
 ```
 
@@ -281,8 +289,10 @@ print("y_test shape:", y_test.shape)
 
 ```Python
 # create dataframe from data in X_train
+
 # label the columns using the strings in iris_dataset.feature_names
 iris_dataframe = pd.DataFrame(X_train, columns=iris_dataset.feature_names)
+
 # create a scatter matrix from the dataframe, color by y_train
 pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15),
                            marker='o', hist_kwds={'bins': 20}, s=60,
@@ -320,7 +330,10 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15),
 82. Let's start!
 
 ```Python
+# import modules
 from sklearn.neighbors import KNeighborsClassifier
+
+# create classifier
 knn = KNeighborsClassifier(n_neighbors=1)
 ```
 
@@ -345,6 +358,7 @@ knn = KNeighborsClassifier(n_neighbors=1)
 92. We will pass `X_train` and `y_train` as arguments to `fit`.
 
 ```Python
+# fit model
 knn.fit(X_train, y_train)
 ```
 
@@ -373,7 +387,10 @@ knn.fit(X_train, y_train)
 101. We could store these measurements in a `NumPy` array and calculate its shape (# samples X # of features).
 
 ```Python
+# store array
 X_new = np.array([[5, 2.9, 1, 0.2]])
+
+# calculate shape
 print("X_new.shape:", X_new.shape)
 ```
 
@@ -384,8 +401,13 @@ print("X_new.shape:", X_new.shape)
 104. Now, we are going to call the `predict` method for the `knn` object to make prediction for `X_new`.
 
 ```Python
+# store prediction
 prediction = knn.predict(X_new)
+
+# output prediction
 print("Prediction:", prediction)
+
+# show prediction
 print("Predicted target name:",
        iris_dataset['target_names'][prediction])
 ```
@@ -409,19 +431,24 @@ print("Predicted target name:",
 112. We'll start by creating label predictions for the test set data contained in `X_test`.
 
 ```Python
+# store prediction
 y_pred = knn.predict(X_test)
+
+# show prediction
 print("Test set predictions:\n", y_pred)
 ```
 
 113. Then we can compare `y_pred` to `y_test` to calculate an accuracy score.
 
 ```Python
+# compare test scores
 print("Test set score: {:.2f}".format(np.mean(y_pred == y_test)))
 ```
 
 114. We could also perform this computation using the `knn` object's `score` method.
 
 ```Python
+# calculate accuracy score
 print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
 ```
 
