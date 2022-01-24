@@ -80,5 +80,7 @@ print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
 
 # Lab Notebook Questions
 
+[Click here](https://colab.research.google.com/drive/1HMp1IMz_MdecLa5wSRpl_VG5VotGiezP?usp=sharing) to access the lab notebook template as a Jupyter Notebook.
+
 Q1: Write a narrative that documents and describes your experience working through this lab. What challenges did you face, and how did you solve them? What did you learn about machine learning through this lab? How are you thinking about machine learning differently after this lab? 
 - You are welcome (but not required) to include Python code as part of that narrative.
