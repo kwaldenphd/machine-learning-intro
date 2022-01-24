@@ -26,6 +26,7 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
       * [TensorFlow](#tensorflow)
       * [Keras](#keras)
       * [PyTorch](#pytorch)
+- [Next Steps](#next-steps)
 
 # Overview
 
@@ -264,3 +265,7 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 73. "PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, primarily developed by Facebook's AI Research lab (FAIR). It is free and open-source software released under the Modified BSD license...A number of pieces of Deep Learning software are built on top of PyTorch, including Tesla Autopilot [and] Uber's Pyro" ([Wikipedia](https://en.wikipedia.org/wiki/PyTorch)).
 
 74. For more on PyTorch: https://pytorch.org/
+
+# Next Steps
+
+75. [Click here](https://github.com/kwaldenphd/machine-learning-intro/blob/main/ml-python-lab.md) to go to the next section of this lab.
