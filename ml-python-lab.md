@@ -106,7 +106,7 @@ print("Keys of iris_dataset: \n{}".format(iris_dataset.keys()))
 
 ```Python
 # show description of iris dataset
-print(iris_dataset['DESCR'[:193] + "\n...")
+print(iris_dataset['DESCR'[:193] + "\n..."])
 ```
 
 18. We can also look at the value for the `target_names` key to see the three species names that are working as classes in the classification algorithm.
